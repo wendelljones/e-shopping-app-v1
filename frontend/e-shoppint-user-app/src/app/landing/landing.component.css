@@ -1,0 +1,27 @@
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: #a53a23;
+}
+
+li {
+    float: left;
+    color: white;
+    margin-left: 12px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #a53a23;
+    background-color: #d1d3d4;
+}

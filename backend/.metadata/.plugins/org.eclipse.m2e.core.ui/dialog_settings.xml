@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="/Users/wendell.jones/Desktop/e-shopping-app/backend/e-shopping-eureka-server-app"/>
+			<item value="/Users/wendell.jones/Desktop/e-shopping-app/backend/e-shopping-admin-app"/>
+			<item value="/Users/wendell.jones/Desktop/e-shopping-app/backend/e-shopping-customer-app"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

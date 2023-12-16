@@ -1,0 +1,116 @@
+<form [formGroup]="userRef" (ngSubmit)="signUp()">
+<div class="container loginFormTitle">
+<div class="centeredTitle">
+<div class="formContents">
+    
+    <h2>Sign up with us!</h2>
+<div class="row justify-content-center">
+<div class="col-4 leftColumn">
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>UserName</label>
+        </div>
+        <div class="" >
+            <input type="text" formControlName="username"/>
+        </div>
+    </div>
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>FullName</label>
+        </div>
+        <div class="" >
+        <input type="text" formControlName="fullName"/>
+    </div>
+    </div>
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>Email Id</label>
+        </div>
+        <div class="" >
+        <input type="email" formControlName="emailid"/>
+    </div>
+    </div>
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>Password</label>
+        </div>
+        <div class="" >
+        <input type="password" formControlName="password"/>
+    </div>
+    </div>
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>Phone Number</label>
+        </div>
+        <div class="" >
+        <input type="number" formControlName="contact"/>
+    </div>
+    </div>
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>Profile Image</label>
+        </div>
+        <div class="" >
+        <input type="text" formControlName="img"/>
+    </div>
+    </div>
+</div>
+
+
+<div class="col-4">
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>Street</label>
+        </div>
+        <div class="" >
+        <input type="text" formControlName="street"/>
+    </div>
+    </div>
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>City</label>
+        </div>
+        <div class="" >
+        <input type="text" formControlName="city"/>
+    </div>
+    </div>
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>State</label>
+        </div>
+        <div class="" >
+        <input type="text" formControlName="state"/>
+    </div>
+    </div>
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>Country</label>
+        </div>
+        <div class="" >
+        <input type="text" formControlName="country"/>
+    </div>
+    </div>
+    <div class="formRow loginFormContents">
+        <div class="formLabel">
+            <label>Zipcode</label>
+        </div>
+        <div class="" >
+        <input type="number" formControlName="pincode"/>
+    </div>
+    </div>
+</div>
+</div>
+
+    <div class="btn-row buttonRow">
+        <div class="col-12">
+            <input type="submit" value="Sign Up" class="btn-signIn buttons"/>
+            <input type="reset" value="Reset" class="btn-reset buttons"/>
+            <a routerLink="/login" class="btn btn-signIn buttons">Login</a>
+        </div>
+    </div>
+    
+    <span style="color:red"></span>
+</div>
+</div>
+</div>
+</form>

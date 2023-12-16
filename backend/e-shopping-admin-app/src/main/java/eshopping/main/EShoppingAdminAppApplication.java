@@ -1,0 +1,61 @@
+package eshopping.main;
+
+import javax.annotation.PostConstruct;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.client.RestTemplate;
+
+import eshopping.entity.Admin;
+import eshopping.repository.AdminRepository;
+
+@SpringBootApplication(scanBasePackages = "eshopping")
+@EntityScan(basePackages = "eshopping.entity")
+@EnableJpaRepositories(basePackages = "eshopping.repository")
+@EnableDiscoveryClient
+public class EShoppingAdminAppApplication {
+
+	@Autowired
+	AdminRepository adminRepository;
+	
+	public PasswordEncoder password() {
+		return new BCryptPasswordEncoder();
+	}
+	
+	@PostConstruct
+	public void doInitialization() {
+		Admin admin = new Admin();
+		admin.setEmailid("admin@gmail.com");
+		admin.setPassword(password().encode("admin@123"));		// admin@123 password converts into hash algorithms
+		String hashpassword = password().encode("admin@123");
+		adminRepository.save(admin);
+		/*
+		  System.out.println(hashpassword);
+		  System.out.println(password().matches("admin@123", hashpassword));
+		  adminRepository.save(admin);
+		 */
+		System.out.println("Amin Account created...");
+	}
+	
+	public static void main(String[] args) {
+		SpringApplication.run(EShoppingAdminAppApplication.class, args);
+		System.out.println("Spring boot micro service for admin running on port number 8181");
+	}
+	
+	@Bean
+	@LoadBalanced				// same application i.e. admin can run on a different port numbers 8181, 9191, 9292 etc. Called 'Scale up'.
+								// @LoadBalanced notation says some calls go to 8181, some to 9191, some to 9292 etc...thus balancing the load.
+								// Accessing with Application Name (in Eureka) only with @LoadBalanced.
+	public RestTemplate restTemplate() {
+		return new RestTemplate();
+	}
+
+}

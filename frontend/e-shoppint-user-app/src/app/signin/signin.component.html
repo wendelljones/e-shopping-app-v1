@@ -1,0 +1,37 @@
+<form [formGroup]="loginRef" (ngSubmit)="signIn()">
+<div class="container loginFormTitle">
+<div class="centeredTitle">
+<div class="formContents">
+    <h2>Login Page</h2>
+    
+    
+        <div class="formRow loginFormContents">
+            <div class="col-2 formLabel">
+                <label>EmailId</label>
+            </div>
+            <div class="col-4" >
+                <input type="email" formControlName="emailid"/>
+            </div>
+        </div>
+
+        <div class="formRow loginFormContents">
+            <div class="col-2 formLabel">
+                <label>Password</label>
+            </div>
+            <div class="col-4" >
+                <input type="password" formControlName="password"/>
+            </div>
+        </div>
+
+    <div class="btn-row buttonRow">
+        <div class="col-12">
+            <input type="submit" value="SignIn" class="btn-signIn buttons"/>
+            <input type="reset" value="reset" class="btn-reset buttons"/>
+            <a routerLink="/signup" class="btn buttons">Sign Up</a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<span style="color:red">{{msg}}</span>
+</form> 

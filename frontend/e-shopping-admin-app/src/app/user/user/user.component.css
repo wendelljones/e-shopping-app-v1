@@ -1,0 +1,37 @@
+div {
+    align-items: center;
+}
+
+h2 {
+    margin-top: 30px;
+    text-align: center;
+}
+
+table {
+    border: 1px black solid;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table img {
+    background-color: transparent;
+}
+
+th {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+tr {
+    border-bottom: 1px solid black;
+}
+
+td {
+    border-right: 1px solid black;
+    padding: 8px;
+}
+
+.profileImageTD {
+    text-align: center;
+}

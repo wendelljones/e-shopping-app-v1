@@ -1,0 +1,44 @@
+<!-- <div>
+    <table class="table">
+        <tr>
+           <th>Order Details</th> 
+        </tr>
+        <tr *ngFor="let order of orders; let i=index;">
+            <div *ngFor="let o of order">
+                <tr>
+                <td>{{o}}</td>
+                </tr>
+            </div>
+        </tr>
+    </table>
+</div> -->
+<div>
+<table>
+    <tr>
+      <th>orderid</th>
+      <th>orderDate</th>
+      <th>orderStatus</th>
+      <th>products</th>
+      <th>totalItems</th>
+      <th>shipmentCharges</th>
+      <th>totalAmount</th>
+      <th>paymentStatus</th>
+      <th>email</th>
+    </tr>
+    <tr *ngFor="let order of orders;">
+      <td>{{ order.orderid }}</td>
+      <td>{{ order.orderDate }}</td>
+      <td>{{ order.orderStatus }}</td>
+      <td>
+        <ul>
+          <li *ngFor="let product of order.products">{{ product.productName }}</li>
+        </ul>
+      </td>
+      <td>{{ order.totalItems }}</td>
+      <td>{{ order.shipmentCharges }}</td>
+      <td>{{ order.totalAmount }}</td>
+      <td>{{ order.paymentStatus }}</td>
+      <td>{{ order.email }}</td>
+    </tr>
+  </table>
+</div>
