@@ -10,7 +10,7 @@ export class AuthService {
 
   private loggedIn = new BehaviorSubject<boolean>(false);
 
-  private baseSignInUrl:string = "http://13.59.141.59:8181/phase3/admin/signIn";
+  private baseSignInUrl:string = "http://18.191.19.66:8181/phase3/admin/signIn";
 
   constructor(public http:HttpClient) { }   // DI for HttpClent
   
