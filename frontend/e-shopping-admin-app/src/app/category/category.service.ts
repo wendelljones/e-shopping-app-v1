@@ -9,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class CategoryService {
   // public baseUrl:string ="http://localhost:3000/categories"
   // public baseUrl:string ="http://localhost:8080/phase2-backend-resapi/CategoryController"
-  public baseUrl:string ="http://18.191.19.66:8181/phase3/admin/category"
+  public baseUrl:string ="http://3.17.177.114:8181/phase3/admin/category"
   
   constructor(public httpClient:HttpClient) { }
 

@@ -9,8 +9,8 @@ export class AuthService {
   private loggedIn = new BehaviorSubject<boolean>(false);
 //  private baseSignUpUrl:string = "http://localhost:8080/phase2-backend-resapi/UsersSignUpController";
 //  private baseSignInUrl:string = "http://localhost:8080/phase2-backend-resapi/UsersSignInController";
-    private baseSignUpUrl:string = "http://18.191.19.66:8282/phase3/customer/signUp";
-    private baseSignInUrl:string = "http://18.191.19.66:8282/phase3/customer/signIn";
+    private baseSignUpUrl:string = "http://3.17.177.114:8282/phase3/customer/signUp";
+    private baseSignInUrl:string = "http://3.17.177.114:8282/phase3/customer/signIn";
     // private baseSignUpUrl:string = "http://localhost:9090/login/signUp";
     // private baseSignInUrl:string = "http://localhost:9090/login/signIn";
   constructor(public http:HttpClient) { }  

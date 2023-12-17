@@ -8,7 +8,7 @@ import { Product } from './product';
 export class ProductService {
 
   // private baseUrl:string ="http://localhost:3000/products";
-  private baseUrl:string ="http://18.191.19.66:8181/phase3/admin/product";
+  private baseUrl:string ="http://3.17.177.114:8181/phase3/admin/product";
 
   constructor(public httpClient:HttpClient) { }  // DI for HttpClient 
 

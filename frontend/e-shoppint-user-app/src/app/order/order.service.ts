@@ -15,7 +15,7 @@ export class OrderService {
 
   //public baseUrl:string="http://localhost:3000/orders";
   // public baseUrl:string="http://localhost:8080/phase2-backend-resapi/OrdersController";
-  public baseUrl:string="http://18.191.19.66:8282/phase3/customer/orders";
+  public baseUrl:string="http://3.17.177.114:8282/phase3/customer/orders";
   constructor(public httpClient:HttpClient) { }
   
   orderPlaced(order:Order):Observable<any> {
